@@ -40,7 +40,7 @@
         NSError *errorWithRes = [NSError errorWithDomain:error.domain code:error.code userInfo:[userInfo copy]];
 				[subscriber sendError:errorWithRes];
 			} else {
-				[subscriber sendNext:RACTuplePack(responseObject, response)];
+				[subscriber sendNext:responseObject];
 				[subscriber sendCompleted];
 			}
 		}];
@@ -81,7 +81,7 @@
         NSError *errorWithRes = [NSError errorWithDomain:error.domain code:error.code userInfo:[userInfo copy]];
 				[subscriber sendError:errorWithRes];
 			} else {
-				[subscriber sendNext:RACTuplePack(responseObject, response)];
+				[subscriber sendNext:responseObject];
 				[subscriber sendCompleted];
 			}
 		}];
